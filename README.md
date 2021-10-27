@@ -21,7 +21,7 @@ Step 3: Deploy all monitoring objects to cluster.  From kr8sdemo root directory,
 kubectl apply -f infra/monitoring
 ```
 
-Step 3: Run Skaffold. From root directory
+Step 4: Run Skaffold. From root directory
 
 ```console
 skaffold dev
