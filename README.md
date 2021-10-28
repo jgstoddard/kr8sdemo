@@ -34,3 +34,21 @@ skaffold dev
 
 To access Grafana metrics, visit http://localhost:32000
 To access kr8sserver API, send requests to http://localhost:31000/api/
+
+----
+
+To view to blog app in browser, open you machine's hosts file: 
+
+MacOS: /etc/hosts
+
+Windows: C:\Windows\System32\Drivers\etc\hosts
+
+Add the following line at the bottom of the file. 
+
+```console
+127.0.0.1 posts.com
+```
+
+Open http://posts.com/ in your browser.
+
+  
