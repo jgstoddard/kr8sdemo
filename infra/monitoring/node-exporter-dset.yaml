@@ -39,11 +39,11 @@ spec:
             memory: 180Mi
         volumeMounts:
         - mountPath: /host/sys
-          # mountPropagation: HostToContainer
+          mountPropagation: HostToContainer
           name: sys
           readOnly: true
         - mountPath: /host/root
-          # mountPropagation: HostToContainer
+          mountPropagation: HostToContainer
           name: root
           readOnly: true
       volumes:
@@ -53,3 +53,21 @@ spec:
       - hostPath:
           path: /
         name: root
+---
+kind: Service
+apiVersion: v1
+metadata:
+  name: node-exporter
+  namespace: monitoring
+  annotations:
+      prometheus.io/scrape: 'true'
+      prometheus.io/port:   '9100'
+spec:
+  selector:
+      app.kubernetes.io/component: exporter
+      app.kubernetes.io/name: node-exporter
+  ports:
+  - name: node-exporter
+    protocol: TCP
+    port: 9100
+    targetPort: 9100

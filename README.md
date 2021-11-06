@@ -3,7 +3,7 @@ Cluster app for demo-ing kr8s
 
 # Installation:
 
-This demo app assumes you have Docker and Kubernetes installed on your local machine
+This demo app assumes you have Docker and Kubernetes installed and running on your local machine
 
 After cloning the repo: 
 
