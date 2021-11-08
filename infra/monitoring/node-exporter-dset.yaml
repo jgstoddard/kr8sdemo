@@ -39,11 +39,11 @@ spec:
             memory: 180Mi
         volumeMounts:
         - mountPath: /host/sys
-          mountPropagation: HostToContainer
+          # mountPropagation: HostToContainer
           name: sys
           readOnly: true
         - mountPath: /host/root
-          mountPropagation: HostToContainer
+          # mountPropagation: HostToContainer
           name: root
           readOnly: true
       volumes:
