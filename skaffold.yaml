@@ -8,7 +8,7 @@ build:
   local:
     push: false
   artifacts: 
-    - image: jgstoddard/client
+    - image: kr8sdemo/client
       context: client
       docker:
         dockerfile: Dockerfile
@@ -16,7 +16,7 @@ build:
         manual:
           - src: "src/**/*.js"
             dest: .
-    - image: jgstoddard/comments
+    - image: kr8sdemo/comments
       context: comments
       docker:
         dockerfile: Dockerfile
@@ -24,7 +24,7 @@ build:
         manual:
           - src: "*.js"
             dest: .
-    - image: jgstoddard/event-bus
+    - image: kr8sdemo/event-bus
       context: event-bus
       docker:
         dockerfile: Dockerfile
@@ -32,7 +32,7 @@ build:
         manual:
           - src: "*.js"
             dest: .
-    - image: jgstoddard/moderation
+    - image: kr8sdemo/moderation
       context: moderation
       docker:
         dockerfile: Dockerfile
@@ -40,7 +40,7 @@ build:
         manual:
           - src: "*.js"
             dest: .
-    - image: jgstoddard/posts
+    - image: kr8sdemo/posts
       context: posts
       docker:
         dockerfile: Dockerfile
@@ -48,15 +48,7 @@ build:
         manual:
           - src: "*.js"
             dest: .
-    - image: jgstoddard/kr8sserver
-      context: kr8sserver
-      docker:
-        dockerfile: Dockerfile
-      sync: 
-        manual:
-          - src: "*.js"
-            dest: .
-    - image: jgstoddard/query
+    - image: kr8sdemo/query
       context: query
       docker:
         dockerfile: Dockerfile

@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: moderation
-          image: jgstoddard/moderation
+          image: kr8sdemo/moderation
 ---
 apiVersion: v1
 kind: Service

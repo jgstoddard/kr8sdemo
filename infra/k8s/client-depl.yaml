@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: client
-          image: jgstoddard/client
+          image: kr8sdemo/client
 ---
 apiVersion: v1
 kind: Service

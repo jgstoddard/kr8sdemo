@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: event-bus
-          image: jgstoddard/event-bus
+          image: kr8sdemo/event-bus
 ---
 apiVersion: v1
 kind: Service

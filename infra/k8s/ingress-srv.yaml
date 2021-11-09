@@ -31,13 +31,6 @@ spec:
                 name: comments-srv
                 port:
                   number: 4001
-          - path: /api/?(.*)
-            pathType: Prefix
-            backend:
-              service:
-                name: kr8sserver-clusterip-srv
-                port:
-                  number: 3400
           - path: /?(.*)
             pathType: Prefix
             backend:
